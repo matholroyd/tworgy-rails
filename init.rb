@@ -1,1 +1,1 @@
-require 'rails-standard-extensions'
+require 'rails_standard_extensions'
