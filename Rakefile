@@ -5,12 +5,10 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "rails-standard-extensions"
-    gem.summary = %Q{TODO}
+    gem.summary = "Standard rails extentions I find quite handy time to time"
     gem.email = "matholroyd@gmail.com"
     gem.homepage = "http://github.com/matholroyd/rails-standard-extensions"
     gem.authors = ["Mat Holroyd"]
-
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
