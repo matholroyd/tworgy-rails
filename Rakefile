@@ -4,12 +4,13 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "rails-standard-extensions"
-    gem.summary = "Standard rails extentions I find quite handy time to time"
-    gem.email = "matholroyd@gmail.com"
-    gem.homepage = "http://github.com/matholroyd/rails-standard-extensions"
+    gem.name = "tworgy-rails-ext"
+    gem.summary = "Rails extentions found to be quite handy"
+    gem.email = "code@tworgy.com"
+    gem.homepage = "http://github.com/matholroyd/tworgy-rails-ext"
     gem.authors = ["Mat Holroyd"]
   end
+  Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
@@ -39,7 +40,7 @@ Rake::RDocTask.new do |rdoc|
   end
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "rails-standard-extensions #{version}"
+  rdoc.title = "tworgy-rails-ext #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
