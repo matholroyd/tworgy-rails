@@ -24,8 +24,7 @@ Gem::Specification.new do |s|
      "lib/tworgy/active_record.rb",
      "lib/tworgy/routing.rb",
      "spec/spec.opts",
-     "spec/spec_helper.rb",
-     "spec/tworgy-rails-ext_spec.rb"
+     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/matholroyd/tworgy-rails}
   s.rdoc_options = ["--charset=UTF-8"]
@@ -33,8 +32,7 @@ Gem::Specification.new do |s|
   s.rubygems_version = %q{1.3.5}
   s.summary = %q{Little helpers for rails.}
   s.test_files = [
-    "spec/spec_helper.rb",
-     "spec/tworgy-rails-ext_spec.rb"
+    "spec/spec_helper.rb"
   ]
 
   if s.respond_to? :specification_version then
