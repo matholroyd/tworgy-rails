@@ -4,15 +4,19 @@ require 'rake'
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
-    gem.name = "tworgy-rails-ext"
-    gem.summary = "Rails extentions found to be quite handy"
+    gem.name = "tworgy-rails"
+    gem.summary = %Q{Little helpers for rails.}
+    gem.description = %Q{Adds methods to help with debugging. See README for more.}
     gem.email = "code@tworgy.com"
-    gem.homepage = "http://github.com/matholroyd/tworgy-rails-ext"
+    gem.homepage = "http://github.com/matholroyd/tworgy-rails"
     gem.authors = ["Mat Holroyd"]
+    gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.files = %w(LICENSE README.rdoc Rakefile) + Dir.glob("{lib,spec}/**/*")
+    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
-  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
+  puts "Jeweler (or a dependency) not available. Install it with: sudo gem install jeweler"
 end
 
 require 'spec/rake/spectask'
@@ -27,21 +31,16 @@ Spec::Rake::SpecTask.new(:rcov) do |spec|
   spec.rcov = true
 end
 
+task :spec => :check_dependencies
 
 task :default => :spec
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
-  if File.exist?('VERSION.yml')
-    config = YAML.load(File.read('VERSION.yml'))
-    version = "#{config[:major]}.#{config[:minor]}.#{config[:patch]}"
-  else
-    version = ""
-  end
+  version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "tworgy-rails-ext #{version}"
+  rdoc.title = "tworgy-rails #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
-

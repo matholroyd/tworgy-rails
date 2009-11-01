@@ -1,14 +1,8 @@
-require 'spec'
-
-require 'rubygems'
-gem 'rails'
-gem 'activesupport'
-
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-
-require 'tworgy/rails_ext'
-require 'tworgy/recursively'
+require 'tworgy-rails'
+require 'spec'
+require 'spec/autorun'
 
 Spec::Runner.configure do |config|
   
