@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{tworgy-rails}
-  s.version = "0.3.1"
+  s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Mat Holroyd"]
-  s.date = %q{2010-02-26}
+  s.date = %q{2010-03-16}
   s.description = %q{Adds methods to help with debugging. See README for more.}
   s.email = %q{code@tworgy.com}
   s.extra_rdoc_files = [
@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "lib/tworgy-rails.rb",
      "lib/tworgy/active_record.rb",
      "lib/tworgy/iphoneification.rb",
+     "lib/tworgy/local_record.rb",
      "lib/tworgy/routing.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
